@@ -1,0 +1,18 @@
+.dark {
+  color-scheme: dark;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.sa {
+  transition: all s;
+  transform: translateX(-50%);
+  opacity: 0;
+}

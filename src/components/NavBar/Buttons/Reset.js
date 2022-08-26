@@ -1,16 +1,5 @@
-import React, { useEffect, useState } from 'react';
-
-import NavBar from './components/NavBar/NavBar';
-import Holder from './components/Holder/Holder';
-import Notes from './components/Notes/Notes';
-import OverLay from './components/Notes/OverLay';
-import './App.css';
-
-function App() {
-  // Notez
-  const [overlayState, setOverlayState] = useState(false);
-  // The Data
-  const [Save, SetSave] = useState([
+const ResetButton = ({ SetSave }) => {
+  const ResetValue = [
     {
       id: 'and1',
       state: false,
@@ -97,6 +86,13 @@ function App() {
     },
     {
       id: 'englab',
+      state: false,
+      r_id: [''],
+      r_state: [false],
+      vhd: 2,
+    },
+    {
+      id: 'ashnayi',
       state: false,
       r_id: [''],
       r_state: [false],
@@ -660,18 +656,24 @@ function App() {
       r_id: [''],
       r_state: [false],
     },
-  ]);
-  // Diving in
-  return (
-    <div className="h-max bg-gray-500 z-0">
-      {overlayState && (
-        <OverLay setoverlay={setOverlayState} Save={Save}></OverLay>
-      )}
-      <NavBar SetSave={SetSave} Save={Save} />
-      <Holder SetSave={SetSave} Save={Save} />
-      <Notes setoverlay={setOverlayState} />
-    </div>
-  );
-}
+  ];
+  const ResetReq = () => {
+    SetSave(ResetValue);
+    window.location.reload();
+  };
 
-export default App;
+  return (
+    <a
+      onClick={ResetReq}
+      href="#"
+      className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-black group h-8 mt-1 mr-2"
+    >
+      <span className="w-48 h-48 rounded bg-rose-800 rotate-[-40deg] absolute bottom-0 left-0 -translate-x-full ease-out duration-200 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+      <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-black">
+        Reset
+      </span>
+    </a>
+  );
+};
+
+export default ResetButton;
