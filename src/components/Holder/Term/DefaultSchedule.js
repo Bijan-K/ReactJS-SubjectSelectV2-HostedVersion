@@ -9,37 +9,37 @@ const DefaultSchedule = (props) => {
     {
       id: 'rz1',
       name: ' ریاضی عمومی 1',
-      r_name: ['_'],
+      r_name: [''],
       vhd: 3,
     },
     {
       id: 'fz1',
       name: 'فیزیک 1',
-      r_name: ['_'],
+      r_name: [''],
       vhd: 3,
     },
     {
       id: 'mbn',
-      name: 'مبانی کامپیوتر و برنامهسازي',
-      r_name: ['_'],
+      name: 'مبانی کامپیوتر و برنامه سازي',
+      r_name: [''],
       vhd: 3,
     },
     {
       id: 'eng',
       name: 'زبان انگلیسی',
-      r_name: ['_'],
-      vhd: 2,
+      r_name: [''],
+      vhd: 3,
     },
     {
       id: 'fa',
       name: 'زبان فارسی',
-      r_name: ['_'],
-      vhd: 2,
+      r_name: [''],
+      vhd: 3,
     },
     {
       id: 'omom1',
       name: 'عمومی',
-      r_name: ['_'],
+      r_name: [''],
       vhd: 2,
     },
   ];
@@ -65,7 +65,7 @@ const DefaultSchedule = (props) => {
     {
       id: 'gos',
       name: 'ریاضیات گسسته',
-      r_name: ['ریاضی عمومی 1', 'مبانی کامپیوتر'],
+      r_name: ['(ریاضی عمومی 1)', '(مبانی کامپیوتر و برنامه سازي)'],
       vhd: 3,
     },
     {
@@ -83,7 +83,7 @@ const DefaultSchedule = (props) => {
     {
       id: 'tar1',
       name: 'تربیت بدنی 1',
-      r_name: ['_'],
+      r_name: [''],
       vhd: 1,
     },
   ];
@@ -115,13 +115,13 @@ const DefaultSchedule = (props) => {
     {
       id: 'sdata',
       name: 'ساختمانهاي داده',
-      r_name: ['ریاضیات گسسته', 'برنامهسازيپیشرفته'],
+      r_name: ['ریاضیات گسسته', 'برنامه سازي پیشرفته'],
       vhd: 3,
     },
     {
       id: 'danesh',
       name: 'دانش خانواده و جمعیت',
-      r_name: ['_'],
+      r_name: [''],
       vhd: 2,
     },
     {
@@ -140,8 +140,8 @@ const DefaultSchedule = (props) => {
   const Term4 = [
     {
       id: 'pdata',
-      name: 'پایگاه دادهها',
-      r_name: ['ساختمانهاي داده'],
+      name: 'پایگاه داده ها',
+      r_name: ['ساختمان هاي داده'],
       vhd: 3,
     },
     {
@@ -158,14 +158,14 @@ const DefaultSchedule = (props) => {
     },
     {
       id: 'nazar',
-      name: 'نظریه زبانها و ماشینها',
-      r_name: ['ساختمانهاي داده'],
+      name: 'نظریه زبان ها و ماشین ها',
+      r_name: ['ساختمان هاي داده'],
       vhd: 3,
     },
     {
       id: 'algo',
-      name: 'طراحی الگوریتمها',
-      r_name: ['ساختمانهاي داده'],
+      name: 'طراحی الگوریتم ها',
+      r_name: ['ساختمان هاي داده'],
       vhd: 3,
     },
     {
@@ -184,32 +184,32 @@ const DefaultSchedule = (props) => {
   const Term5 = [
     {
       id: 'signal',
-      name: 'سیگنالها و سیستمها',
+      name: 'سیگنال ها و سیستم ها',
       r_name: ['ریاضیات مهندسی'],
       vhd: 3,
     },
     {
       id: 'tarhsystem',
-      name: 'طراحی کامپیوتري سیستمهاي دیجیتال',
+      name: 'طراحی کامپیوتري سیستم هاي دیجیتال',
       r_name: ['معماري کامپیوتر'],
       vhd: 3,
     },
     {
       id: 'sys-amel',
-      name: 'سیستمهاي عامل',
-      r_name: ['معماري کامپیوتر', 'ساختمانهاي داده'],
+      name: 'سیستم هاي عامل',
+      r_name: ['معماري کامپیوتر', 'ساختمان هاي داده'],
       vhd: 3,
     },
     {
       id: 'objector',
-      name: 'طراحی شیگراي سیستمها',
+      name: 'طراحی شی گراي سیستم ها',
       r_name: ['برنامه سازي پیشرفته'],
       vhd: 3,
     },
     {
       id: 'osolcomplier',
       name: 'اصول طراحی کامپایلر',
-      r_name: ['ساختمانهاي داده'],
+      r_name: ['ساختمان هاي داده'],
       vhd: 3,
     },
     {
@@ -230,30 +230,30 @@ const DefaultSchedule = (props) => {
       id: 'ravesh',
       name: 'روش پژوهش و ارائه',
       r_name: ['زبان تخصصی'],
-      vhd: 3,
+      vhd: 2,
     },
     {
       id: 'tahlil-sys',
-      name: 'تحلیل و طراحی سیستمها',
+      name: 'تحلیل و طراحی سیستم ها',
       r_name: ['برنامه سازي پیشرفته'],
       vhd: 3,
     },
     {
       id: 'shabake',
-      name: 'شبکههاي کامپیوتري',
-      r_name: ['سیستمهاي عامل'],
+      name: 'شبکه هاي کامپیوتري',
+      r_name: ['سیستم هاي عامل'],
       vhd: 3,
     },
     {
       id: 'trahi-zaban',
-      name: 'طراحی زبانهاي برنامه سازي',
+      name: 'طراحی زبان هاي برنامه سازي',
       r_name: ['اصول طراحی کامپایلر'],
       vhd: 3,
     },
     {
       id: 'az-sys-amel',
-      name: 'آز سیستمهاي عامل',
-      r_name: ['(سیستمهاي عامل)'],
+      name: 'آز سیستم هاي عامل',
+      r_name: ['(سیستم هاي عامل)'],
       vhd: 1,
     },
     {
@@ -273,25 +273,25 @@ const DefaultSchedule = (props) => {
     {
       id: 'tamol',
       name: 'تعامل انسان و کامپیوتر',
-      r_name: ['تحلیل و طراحی سیستمها'],
+      r_name: ['تحلیل و طراحی سیستم ها'],
       vhd: 3,
     },
     {
       id: 'moh-narm',
       name: 'مهندسی نرم افزار',
-      r_name: ['تحلیل و طراحی سیستمها'],
+      r_name: ['تحلیل و طراحی سیستم ها'],
       vhd: 3,
     },
     {
       id: 'moh-net',
       name: 'مهندسی اینترنت',
-      r_name: ['شبکههاي کامپیوتري', 'پایگاه دادهها'],
+      r_name: ['شبکه هاي کامپیوتري', '(پایگاه داده ها)'],
       vhd: 3,
     },
     {
       id: 'az-shabake',
-      name: 'آز شبکههاي کامپیوتري',
-      r_name: ['(شبکههاي کامپیوتري)'],
+      name: 'آز شبکه هاي کامپیوتري',
+      r_name: ['(شبکه هاي کامپیوتري)'],
       vhd: 1,
     },
     {
@@ -328,8 +328,8 @@ const DefaultSchedule = (props) => {
     },
     {
       id: 'ravesh-rasmi',
-      name: 'روشهاي رسمی در مهندسی نرم افزار',
-      r_name: ['تحلیل و طراحی سیستمها'],
+      name: 'روش هاي رسمی در مهندسی نرم افزار',
+      r_name: ['تحلیل و طراحی سیستم ها'],
       vhd: 3,
     },
     {
@@ -377,14 +377,9 @@ const DefaultSchedule = (props) => {
         save.forEach((element2) => {
           if (element2.id == element.id) {
             if (element2.r_state.length == 1) {
-              if (element.r_name[0] == '_') {
-                textInfo[0] = element.r_name[0];
-                Truth[2] = true;
-              } else {
-                textInfo[0] = element.r_name[0];
-                Truth[0] = element2.r_state[0] == true ? true : false;
-                Truth[2] = element2.r_state[0] == true ? true : false;
-              }
+              textInfo[0] = element.r_name[0];
+              Truth[0] = element2.r_state[0] == true ? true : false;
+              Truth[2] = element2.r_state[0] == true ? true : false;
             } else if (element2.r_state.length == 2) {
               textInfo[0] = element.r_name[0];
               textInfo[1] = element.r_name[1];
@@ -399,7 +394,7 @@ const DefaultSchedule = (props) => {
     return (
       <>
         <div className="top-5 absolute">
-          <p className="text-sm">
+          <p className="text-lg">
             {Truth[0] && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -419,7 +414,7 @@ const DefaultSchedule = (props) => {
             {textInfo[0]}
           </p>
           <br></br>
-          <p className="flex text-sm">
+          <p className="flex text-lg">
             {textInfo[1]}
             {Truth[1] && (
               <svg
@@ -438,7 +433,7 @@ const DefaultSchedule = (props) => {
             )}
           </p>
         </div>
-        <div className="bottom-5 absolute">
+        <div className="bottom-5 absolute ">
           {Truth[2] && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -551,6 +546,26 @@ const DefaultSchedule = (props) => {
   useEffect(() => {
     let SaveData = props.Save;
     let vhddd = 0;
+
+    if (SaveData[SaveData.length - 1].vhd >= 80) {
+      SaveData[SaveData.length - 2].state = true;
+      SaveData[SaveData.length - 2].r_state = [true];
+      SaveData[SaveData.length - 4].r_state = [true];
+    } else {
+      SaveData[SaveData.length - 2].state = false;
+      SaveData[SaveData.length - 2].r_state = [false];
+      SaveData[SaveData.length - 4].r_state = [false];
+    }
+    if (SaveData[SaveData.length - 1].vhd >= 100) {
+      SaveData[SaveData.length - 3].state = true;
+      SaveData[SaveData.length - 3].r_state = [true];
+      SaveData[SaveData.length - 5].r_state = [true];
+    } else {
+      SaveData[SaveData.length - 3].state = false;
+      SaveData[SaveData.length - 3].r_state = [false];
+      SaveData[SaveData.length - 5].r_state = [false];
+    }
+
     SaveData.forEach((element) => {
       // if an id has true state
       if (element.state == true) {
@@ -609,6 +624,13 @@ const DefaultSchedule = (props) => {
       }
       SaveData[SaveData.length - 1].vhd = vhddd;
     });
+
+    if (SaveData[SaveData.length - 1].vhd >= 80) {
+      SaveData[SaveData.length - 2].r_state = true;
+    }
+    if (SaveData[SaveData.length - 1].vhd >= 100) {
+      SaveData[SaveData.length - 3].r_state = true;
+    }
     props.SetSave(SaveData);
   }, [hoverV, btnclick]);
 
@@ -616,13 +638,13 @@ const DefaultSchedule = (props) => {
     <div
       dir="rtl"
       id="omomi"
-      className="grid grid-cols-12 animate-fadein gap-5 h h-max m-2"
+      className="grid grid-cols-12 animate-fadein gap-5 m-2"
     >
       {/* first table */}
       <div className="col-start-1 col-end-5 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse1"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded"
+          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term1}></HoverC>
         </div>
@@ -643,7 +665,7 @@ const DefaultSchedule = (props) => {
             onClick={btnClicked}
             onMouseEnter={HoverEv}
             onMouseLeave={HoverEv}
-            className="rounded col-span-5 block text-center z-20 p-1 cursor-pointer"
+            className="rounded col-span-5 w-full block text-center z-20 p-1 cursor-pointer"
             id={`${Term1[0].id}`}
           >
             {Term1[0].name}
@@ -739,7 +761,7 @@ const DefaultSchedule = (props) => {
       <div className="col-start-5 col-end-9 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse2"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded"
+          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term2}></HoverC>
         </div>
@@ -873,7 +895,7 @@ const DefaultSchedule = (props) => {
       <div className="col-start-9 col-end-[13] bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse3"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded"
+          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term3}></HoverC>
         </div>
@@ -1021,7 +1043,7 @@ const DefaultSchedule = (props) => {
       <div className="col-start-1 col-end-5 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse4"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded"
+          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term4}></HoverC>
         </div>
@@ -1153,7 +1175,7 @@ const DefaultSchedule = (props) => {
       <div className="col-start-5 col-end-9 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse5"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded"
+          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term5}></HoverC>
         </div>
@@ -1271,7 +1293,7 @@ const DefaultSchedule = (props) => {
       <div className="col-start-9 col-end-[13] bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse6"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded"
+          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term6}></HoverC>
         </div>
@@ -1419,7 +1441,7 @@ const DefaultSchedule = (props) => {
       <div className="col-start-3 col-end-7 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse7"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded"
+          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term7}></HoverC>
         </div>
@@ -1563,7 +1585,7 @@ const DefaultSchedule = (props) => {
       <div className="col-start-7 col-end-11 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse8"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded"
+          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term8}></HoverC>
         </div>

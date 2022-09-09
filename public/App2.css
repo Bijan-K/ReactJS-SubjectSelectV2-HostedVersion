@@ -1,0 +1,16 @@
+.btnfont {
+  font-family: 'btnfont';
+}
+.notezfont {
+  font-family: 'notezfont';
+}
+
+@font-face {
+  font-family: 'btnfont';
+  src: local('btnfont'), url(./fonts/FarNazanin.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'notezfont';
+  src: local('notezfont'), url(./fonts/Shekari.Font.ttf) format('truetype');
+}

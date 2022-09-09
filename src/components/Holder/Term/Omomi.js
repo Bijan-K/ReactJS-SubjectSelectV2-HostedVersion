@@ -49,6 +49,44 @@ const Omomi = (props) => {
       vhd: 2,
     },
   ];
+  const Ashnayi = [
+    {
+      id: 'tafsir-q',
+      name: 'تفسیر موضوعی قرآن ',
+      vhd: 2,
+    },
+    {
+      id: 'tafsir-n',
+      name: 'تفسیر موضوعی نهج البلاغه',
+      vhd: 2,
+    },
+  ];
+  const Tarikh = [
+    {
+      id: 'emam',
+      name: 'تاریخ امامت',
+      vhd: 2,
+    },
+    {
+      id: 'tarikhtahlil',
+      name: 'تاریخ تحلیلی صدر اسلام',
+      vhd: 2,
+    },
+  ];
+  const Farhang = [
+    {
+      id: 'tarikh',
+      name: 'تاریخ فرهنگ و تمدن اسلامی',
+      vhd: 2,
+    },
+  ];
+  const Danesh = [
+    {
+      id: 'danesh',
+      name: 'دانش خانواده و جمعیت',
+      vhd: 2,
+    },
+  ];
   const Enghlab = [
     {
       id: 'englab',
@@ -66,45 +104,16 @@ const Omomi = (props) => {
       vhd: 2,
     },
   ];
-  const Tarikh = [
-    {
-      id: 'tarikh',
-      name: 'تاریخ فرهنگ و تمدن اسلامی',
-      vhd: 2,
-    },
-    {
-      id: 'emam',
-      name: 'تاریخ امامت',
-      vhd: 2,
-    },
-    {
-      id: 'tarikhtahlil',
-      name: 'تاریخ تحلیلی صدر اسلام',
-      vhd: 2,
-    },
-  ];
-  const Ashnayi = [
-    {
-      id: 'tafsir-q',
-      name: 'تفسیر موضوعی قرآن ',
-      vhd: 2,
-    },
-    {
-      id: 'tafsir-n',
-      name: 'تفسیر موضوعی نهج البلاغه',
-      vhd: 2,
-    },
-  ];
   const Koliha = [
     {
       id: 'fa',
       name: 'زبان فارسی',
-      vhd: 2,
+      vhd: 3,
     },
     {
       id: 'eng',
       name: 'زبان انگلیسی',
-      vhd: 2,
+      vhd: 3,
     },
     {
       id: 'tar1',
@@ -117,15 +126,18 @@ const Omomi = (props) => {
       r_name: ['تربیت بدنی 1'],
       vhd: 1,
     },
+  ];
+
+  const jadaval2 = [
     {
-      id: 'danesh',
-      name: 'دانش خانواده و جمعیت',
-      vhd: 2,
+      id: 'emamkho',
+      name: 'اندیشه ها و وصایای امام خمینی',
+      vhd: 1,
     },
     {
-      id: 'defa',
-      name: 'دفاع مقدس',
-      vhd: 2,
+      id: 'quran',
+      name: 'انس با قران',
+      vhd: 1,
     },
   ];
   // THE FUNCTIONS
@@ -158,7 +170,7 @@ const Omomi = (props) => {
     return (
       <>
         <div className="top-5 absolute">
-          <p className="text-sm">
+          <p className="text-lg">
             {Truth[0] && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +190,7 @@ const Omomi = (props) => {
             {textInfo[0]}
           </p>
 
-          <p className="flex text-sm">
+          <p className="flex text-lg">
             {textInfo[1]}
             {Truth[1] && (
               <svg
@@ -256,10 +268,10 @@ const Omomi = (props) => {
       if (element.id == id) {
         if (element.state == true) {
           element.state = false;
-          SaveNow[SaveNow.length - 1].vhd -= element.vhd;
+          // SaveNow[SaveNow.length - 1].vhd -= element.vhd;
         } else if (element.state == false) {
           element.state = true;
-          SaveNow[SaveNow.length - 1].vhd += element.vhd;
+          // SaveNow[SaveNow.length - 1].vhd += element.vhd;
         }
       }
     });
@@ -270,9 +282,9 @@ const Omomi = (props) => {
           element.r_state[0] = true;
         }
       } else {
-        if (element.r_state[0] == id) {
+        if (element.r_id[0] == id) {
           element.r_state[0] = true;
-        } else if (element.r_state[1] == id) {
+        } else if (element.r_id[1] == id) {
           element.r_state[1] = true;
         }
       }
@@ -309,9 +321,31 @@ const Omomi = (props) => {
   // sassaas
   useEffect(() => {
     let SaveData = props.Save;
+    let vhddd = 0;
+
+    if (SaveData[SaveData.length - 1].vhd >= 80) {
+      SaveData[SaveData.length - 2].state = true;
+      SaveData[SaveData.length - 2].r_state = [true];
+      SaveData[SaveData.length - 4].r_state = [true];
+    } else {
+      SaveData[SaveData.length - 2].state = false;
+      SaveData[SaveData.length - 2].r_state = [false];
+      SaveData[SaveData.length - 4].r_state = [false];
+    }
+    if (SaveData[SaveData.length - 1].vhd >= 100) {
+      SaveData[SaveData.length - 3].state = true;
+      SaveData[SaveData.length - 3].r_state = [true];
+      SaveData[SaveData.length - 5].r_state = [true];
+    } else {
+      SaveData[SaveData.length - 3].state = false;
+      SaveData[SaveData.length - 3].r_state = [false];
+      SaveData[SaveData.length - 5].r_state = [false];
+    }
+
     SaveData.forEach((element) => {
       // if an id has true state
       if (element.state == true) {
+        vhddd += element.vhd;
         let btn1 = document.getElementById(`${element.id}`);
         if (btn1) {
           btn1.classList.add('bg-teal-500');
@@ -364,11 +398,19 @@ const Omomi = (props) => {
           }
         }
       }
+      SaveData[SaveData.length - 1].vhd = vhddd;
     });
+    if (SaveData[SaveData.length - 1].vhd >= 80) {
+      SaveData[SaveData.length - 2].r_state[0] = true;
+    }
+    if (SaveData[SaveData.length - 1].vhd >= 100) {
+      SaveData[SaveData.length - 3].r_state[0] = true;
+    }
+    props.SetSave(SaveData);
   }, [hoverV, btnclick]);
 
   return (
-    <div dir="rtl" id="omomi" className="grid grid-cols-2 animate-fadein gap-5">
+    <div dir="rtl" className="grid grid-cols-2 animate-fadein gap-5">
       {/* first table */}
       <div className="bg-slate-800 rounded flex flex-col gap-1 relative">
         <div
@@ -391,7 +433,7 @@ const Omomi = (props) => {
         >
           {/* the thing */}
           <p className="row-start-1 row-end-7 col-span-2 p-1 text-center">
-            X2 مبانی نظری اسلام
+            x2 مبانی نظری اسلام
           </p>
           {/* buttons */}
           <button
@@ -549,50 +591,36 @@ const Omomi = (props) => {
         <div className="grid grid-cols-5 content-center text-white gap-2">
           {/* the thing */}
           <p className="row-start-1 row-end-7 col-span-2 p-1 text-center">
-            انقلاب اسلامی
+            آشنایی با مبانی اسلامی
           </p>
           {/* buttons */}
           <button
             onClick={btnClicked}
             className="rounded col-span-2 text-center block z-20 p-1 cursor-pointer"
-            id={`${Enghlab[0].id}`}
+            id={`${Ashnayi[0].id}`}
           >
-            {Enghlab[0].name}
+            {Ashnayi[0].name}
           </button>
           <p
-            id={`b${Enghlab[0].id}`}
+            id={`b${Ashnayi[0].id}`}
             className="rounded col-span-1 p-1 place-self-center text-center px-3 "
           >
-            {Enghlab[0].vhd}
+            {Ashnayi[0].vhd}
           </p>
 
           <button
             onClick={btnClicked}
             className="rounded col-span-2 text-center block z-20 p-1 cursor-pointer"
-            id={`${Enghlab[1].id}`}
+            id={`${Ashnayi[1].id}`}
           >
-            {Enghlab[1].name}
+            {Ashnayi[1].name}
           </button>
 
           <p
-            id={`b${Enghlab[1].id}`}
+            id={`b${Ashnayi[1].id}`}
             className="rounded col-span-1 p-1 place-self-center text-center px-3 "
           >
-            {Enghlab[1].vhd}
-          </p>
-
-          <button
-            onClick={btnClicked}
-            className="rounded col-span-2 text-center block z-20 p-1 cursor-pointer"
-            id={`${Enghlab[2].id}`}
-          >
-            {Enghlab[2].name}
-          </button>
-          <p
-            id={`b${Enghlab[2].id}`}
-            className="rounded col-span-1 p-1 place-self-center text-center px-3 "
-          >
-            {Enghlab[2].vhd}
+            {Ashnayi[1].vhd}
           </p>
         </div>
       </div>
@@ -639,24 +667,70 @@ const Omomi = (props) => {
           >
             {Tarikh[1].vhd}
           </p>
-
-          <button
-            onClick={btnClicked}
-            className="rounded col-span-2 text-center block z-20 p-1 cursor-pointer"
-            id={`${Tarikh[2].id}`}
-          >
-            {Tarikh[2].name}
-          </button>
-          <p
-            id={`b${Tarikh[2].id}`}
-            className="rounded col-span-1 p-1 place-self-center text-center px-3 "
-          >
-            {Tarikh[2].vhd}
-          </p>
         </div>
       </div>
       {/* Fith table */}
       <div className="bg-slate-800 rounded flex flex-col gap-1 relative mb-auto">
+        {/* the content */}
+        <div className="grid grid-cols-5 items-center rounded-t text-white bg-black content-center p-1">
+          <div className="col-span-2 text-center">گرایش</div>
+          <div className="col-span-2 text-center">درس</div>
+          <div className="col-span-1 text-center">واحد</div>
+        </div>
+
+        <div className="grid grid-cols-5 content-center text-white gap-2">
+          {/* the thing */}
+          <p className="row-start-1 row-end-7 col-span-2 p-1 text-center">
+            تاریخ فرهنگ و تمدن اسلام و ایران
+          </p>
+          {/* buttons */}
+          <button
+            onClick={btnClicked}
+            className="rounded col-span-2 text-center block z-20 p-1 cursor-pointer"
+            id={`${Farhang[0].id}`}
+          >
+            {Farhang[0].name}
+          </button>
+          <p
+            id={`b${Farhang[0].id}`}
+            className="rounded col-span-1 p-1 place-self-center text-center px-3 "
+          >
+            {Farhang[0].vhd}
+          </p>
+        </div>
+      </div>
+      {/* sixth table */}
+      <div className="bg-slate-800 rounded flex flex-col gap-1 relative mb-auto">
+        {/* the content */}
+        <div className="grid grid-cols-5 items-center rounded-t text-white bg-black content-center p-1">
+          <div className="col-span-2 text-center">گرایش</div>
+          <div className="col-span-2 text-center">درس</div>
+          <div className="col-span-1 text-center">واحد</div>
+        </div>
+
+        <div className="grid grid-cols-5 content-center text-white gap-2">
+          {/* the thing */}
+          <p className="row-start-1 row-end-7 col-span-2 p-1 text-center">
+            دانش خانواده و جمعیت{' '}
+          </p>
+          {/* buttons */}
+          <button
+            onClick={btnClicked}
+            className="rounded col-span-2 text-center block z-20 p-1 cursor-pointer"
+            id={`${Danesh[0].id}`}
+          >
+            {Danesh[0].name}
+          </button>
+          <p
+            id={`b${Danesh[0].id}`}
+            className="rounded col-span-1 p-1 place-self-center text-center px-3 "
+          >
+            {Danesh[0].vhd}
+          </p>
+        </div>
+      </div>
+      {/* seven table */}
+      <div className="bg-slate-800 rounded flex flex-col gap-1 relative ">
         {/* the content */}
         <div className="grid grid-cols-5 items-center rounded-t text-white bg-black content-center p-1">
           <div className="col-span-2 text-center">گرایش</div>
@@ -673,35 +747,50 @@ const Omomi = (props) => {
           <button
             onClick={btnClicked}
             className="rounded col-span-2 text-center block z-20 p-1 cursor-pointer"
-            id={`${Ashnayi[0].id}`}
+            id={`${Enghlab[0].id}`}
           >
-            {Ashnayi[0].name}
+            {Enghlab[0].name}
           </button>
           <p
-            id={`b${Ashnayi[0].id}`}
+            id={`b${Enghlab[0].id}`}
             className="rounded col-span-1 p-1 place-self-center text-center px-3 "
           >
-            {Ashnayi[0].vhd}
+            {Enghlab[0].vhd}
           </p>
 
           <button
             onClick={btnClicked}
             className="rounded col-span-2 text-center block z-20 p-1 cursor-pointer"
-            id={`${Ashnayi[1].id}`}
+            id={`${Enghlab[1].id}`}
           >
-            {Ashnayi[1].name}
+            {Enghlab[1].name}
           </button>
 
           <p
-            id={`b${Ashnayi[1].id}`}
+            id={`b${Enghlab[1].id}`}
             className="rounded col-span-1 p-1 place-self-center text-center px-3 "
           >
-            {Ashnayi[1].vhd}
+            {Enghlab[1].vhd}
+          </p>
+
+          <button
+            onClick={btnClicked}
+            className="rounded col-span-2 text-center block z-20 p-1 cursor-pointer"
+            id={`${Enghlab[2].id}`}
+          >
+            {Enghlab[2].name}
+          </button>
+
+          <p
+            id={`b${Enghlab[2].id}`}
+            className="rounded col-span-1 p-1 place-self-center text-center px-3 "
+          >
+            {Enghlab[2].vhd}
           </p>
         </div>
       </div>
-      {/* sixth Table */}
-      <div className="bg-slate-800 rounded flex flex-col gap-1 relative mb-5">
+      {/* eigth Table */}
+      <div className="bg-slate-800 rounded flex flex-col gap-1 relative mb-auto">
         <div
           id="hoverMouse6"
           className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded "
@@ -721,7 +810,9 @@ const Omomi = (props) => {
           className="grid grid-cols-5 content-center text-white gap-2 pb-3"
         >
           {/* the thing */}
-          <p className="row-start-1 row-end-7 col-span-2 p-1 text-center">-</p>
+          <p className="row-start-1 row-end-7 col-span-2 p-1 text-center">
+            x4 متفرقه
+          </p>
           {/* buttons */}
           <button
             onClick={btnClicked}
@@ -781,33 +872,50 @@ const Omomi = (props) => {
           >
             {Koliha[3].vhd}
           </p>
+        </div>
+      </div>
+      {/* ninith Table */}
+      <div className="bg-slate-800 rounded flex flex-col gap-1 relative mb-5">
+        {/* the content */}
+        <div className="grid grid-cols-5 items-center rounded-t text-white bg-black content-center p-1">
+          <div className="col-span-2 text-center">گرایش</div>
+          <div className="col-span-2 text-center">درس</div>
+          <div className="col-span-1 text-center">واحد</div>
+        </div>
 
+        <div className="grid grid-cols-5 content-center text-white gap-2">
+          {/* the thing */}
+          <p className="row-start-1 row-end-7 col-span-2 p-1 text-center">
+            درس های جدول دوم x2
+          </p>
+          {/* buttons */}
           <button
             onClick={btnClicked}
             className="rounded col-span-2 text-center block z-20 p-1 cursor-pointer"
-            id={`${Koliha[4].id}`}
+            id={`${jadaval2[0].id}`}
           >
-            {Koliha[4].name}
+            {jadaval2[0].name}
           </button>
           <p
-            id={`b${Koliha[4].id}`}
-            className="rounded col-span-1 p-1 place-self-center text-center px-3"
+            id={`b${jadaval2[0].id}`}
+            className="rounded col-span-1 p-1 place-self-center text-center px-3 "
           >
-            {Koliha[4].vhd}
+            {jadaval2[0].vhd}
           </p>
 
           <button
             onClick={btnClicked}
             className="rounded col-span-2 text-center block z-20 p-1 cursor-pointer"
-            id={`${Koliha[5].id}`}
+            id={`${jadaval2[1].id}`}
           >
-            {Koliha[5].name}
+            {jadaval2[1].name}
           </button>
+
           <p
-            id={`b${Koliha[5].id}`}
+            id={`b${jadaval2[1].id}`}
             className="rounded col-span-1 p-1 place-self-center text-center px-3 "
           >
-            {Koliha[5].vhd}
+            {jadaval2[1].vhd}
           </p>
         </div>
       </div>

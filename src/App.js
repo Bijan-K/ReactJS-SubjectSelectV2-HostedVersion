@@ -12,6 +12,62 @@ function App() {
   // The Data
   const [Save, SetSave] = useState([
     {
+      id: 'dorosvije1',
+      state: false,
+      r_id: [''],
+      r_state: [false],
+      vhd: 3,
+    },
+    {
+      id: 'dorosvije2',
+      state: false,
+      r_id: [''],
+      r_state: [false],
+      vhd: 3,
+    },
+    {
+      id: 'hoshmoha',
+      state: false,
+      r_id: ['pish'],
+      r_state: [false],
+      vhd: 3,
+    },
+    {
+      id: 'mbnbinayi',
+      state: false,
+      r_id: ['hoshmoha'],
+      r_state: [false],
+      vhd: 3,
+    },
+    {
+      id: 'mbnpardazesh',
+      state: false,
+      r_id: ['amar', 'signal'],
+      r_state: [false, false],
+      vhd: 3,
+    },
+    {
+      id: 'osolrobot',
+      state: false,
+      r_id: ['signal'],
+      r_state: [false],
+      vhd: 3,
+    },
+    {
+      id: 'emamkho',
+      state: false,
+      r_id: [''],
+      r_state: [false],
+      vhd: 1,
+    },
+    {
+      id: 'quran',
+      state: false,
+      r_id: [''],
+      r_state: [false],
+      vhd: 1,
+    },
+    {
       id: 'and1',
       state: false,
       r_id: [''],
@@ -43,7 +99,7 @@ function App() {
       id: 'danesh',
       state: false,
       r_id: [''],
-      r_state: [false],
+      r_state: [true],
       vhd: 2,
     },
     {
@@ -96,20 +152,6 @@ function App() {
       vhd: 2,
     },
     {
-      id: 'englab',
-      state: false,
-      r_id: [''],
-      r_state: [false],
-      vhd: 2,
-    },
-    {
-      id: 'andishe',
-      state: false,
-      r_id: [''],
-      r_state: [false],
-      vhd: 2,
-    },
-    {
       id: 'tarikh',
       state: false,
       r_id: [''],
@@ -148,21 +190,21 @@ function App() {
       id: 'fa',
       state: false,
       r_id: [''],
-      r_state: [false],
-      vhd: 2,
+      r_state: [true],
+      vhd: 3,
     },
     {
       id: 'eng',
       state: false,
       r_id: [''],
-      r_state: [false],
-      vhd: 2,
+      r_state: [true],
+      vhd: 3,
     },
     {
       id: 'tar1',
       state: false,
       r_id: [''],
-      r_state: [false],
+      r_state: [true],
       vhd: 1,
     },
     {
@@ -173,17 +215,10 @@ function App() {
       vhd: 1,
     },
     {
-      id: 'tanesh',
-      state: false,
-      r_id: [''],
-      r_state: [false],
-      vhd: 2,
-    },
-    {
       id: 'defa',
       state: false,
       r_id: [''],
-      r_state: [false],
+      r_state: [true],
       vhd: 2,
     },
     {
@@ -215,18 +250,18 @@ function App() {
       vhd: 3,
     },
     {
-      id: 'hoshmoha',
-      state: false,
-      r_id: ['pish'],
-      r_state: [false],
-      vhd: 3,
-    },
-    {
       id: 'algopish',
       state: false,
       r_id: ['algo'],
       r_state: [false],
       vhd: 3,
+    },
+    {
+      id: 'azmadelec',
+      state: false,
+      r_id: ['mad_elc'],
+      r_state: [false],
+      vhd: 1,
     },
     {
       id: 'tarashibazi',
@@ -281,7 +316,7 @@ function App() {
       id: 'rz1',
       state: false,
       r_id: [''],
-      r_state: [false],
+      r_state: [true],
       vhd: 3,
     },
     {
@@ -295,7 +330,7 @@ function App() {
       id: 'fz1',
       state: false,
       r_id: [''],
-      r_state: [false],
+      r_state: [true],
       vhd: 3,
     },
     {
@@ -392,29 +427,15 @@ function App() {
     {
       id: 'moh-net',
       state: false,
-      r_id: ['shabake'],
-      r_state: [false],
-      vhd: 3,
-    },
-    {
-      id: 'karamozi',
-      state: false,
-      r_id: ['80vhd'],
-      r_state: [false],
-      vhd: 3,
-    },
-    {
-      id: 'proj',
-      state: false,
-      r_id: ['100vhd'],
-      r_state: [false],
+      r_id: ['shabake', 'pdata'],
+      r_state: [false, false],
       vhd: 3,
     },
     {
       id: 'mbn',
       state: false,
       r_id: [''],
-      r_state: [false],
+      r_state: [true],
       vhd: 3,
     },
     {
@@ -464,14 +485,14 @@ function App() {
       state: false,
       r_id: ['eng'],
       r_state: [false],
-      vhd: 3,
+      vhd: 2,
     },
     {
       id: 'ravesh',
       state: false,
       r_id: ['engt'],
       r_state: [false],
-      vhd: 3,
+      vhd: 2,
     },
     {
       id: 'moh',
@@ -553,7 +574,7 @@ function App() {
     {
       id: 'az-man-memari',
       state: false,
-      r_id: ['memar', 'mad_elc'],
+      r_id: ['memar', 'mad_man'],
       r_state: [false, false],
       vhd: 1,
     },
@@ -642,14 +663,28 @@ function App() {
       vhd: 0,
     },
     {
-      id: '80vhd',
+      id: 'proj',
+      state: false,
+      r_id: ['100vhd'],
+      r_state: [false],
+      vhd: 3,
+    },
+    {
+      id: 'karamozi',
+      state: false,
+      r_id: ['80vhd'],
+      r_state: [false],
+      vhd: 1,
+    },
+    {
+      id: '100vhd',
       state: false,
       r_id: [''],
       r_state: [false],
       vhd: 0,
     },
     {
-      id: '100vhd',
+      id: '80vhd',
       state: false,
       r_id: [''],
       r_state: [false],
@@ -663,7 +698,7 @@ function App() {
   ]);
   // Diving in
   return (
-    <div className="h-max bg-gray-500 z-0">
+    <div className="flex flex-col h-max bg-gray-500 z-0">
       {overlayState && (
         <OverLay setoverlay={setOverlayState} Save={Save}></OverLay>
       )}
