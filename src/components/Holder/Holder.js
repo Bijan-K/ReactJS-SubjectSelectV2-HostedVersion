@@ -1,27 +1,32 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import DefaultSchedule from './Term/DefaultSchedule';
 import Ekhtesasi from './Term/Ekhtesasi';
 import Ekhtiyari from './Term/Ekhtiyari';
 import Omomi from './Term/Omomi';
+import SaveContext from '../../context/SaveContext';
 
-const Holder = (props) => {
+const Holder = () => {
+  const { SetEffect, Effect } = useContext(SaveContext);
+
   const [Foucs, SetFocus] = useState(1);
-  const [Tab, setTab] = useState(1);
+  const [Tab, setFormerTab] = useState(1);
   const tabClicked = (e) => {
-    const pbar = document.getElementById(`${Tab}bar`);
-    const nbar = document.getElementById(`${e}bar`);
+    const FormerTab = document.getElementById(`${Tab}bar`);
+    const SelectedTab = document.getElementById(`${e}bar`);
 
-    pbar.classList.remove('w-full');
-    nbar.classList.remove('w-0');
-    nbar.classList.add('w-full');
+    FormerTab.classList.remove('w-full');
+    SelectedTab.classList.remove('w-0');
+    SelectedTab.classList.add('w-full');
 
-    setTab(e);
+    setFormerTab(e);
     SetFocus(e);
+
+    SetEffect(Effect + 1);
   };
 
   return (
     <div className="flex flex-col mt-10 btnfont text-xl justify-center items-center gap-4">
-      <div className=" mt-5 flex ">
+      <div className="mt-5 flex ">
         <button
           id="1tab"
           onClick={() => tabClicked(1)}
@@ -96,12 +101,10 @@ const Holder = (props) => {
       </div>
 
       <div dir="rtl" className="">
-        {Foucs === 1 && (
-          <DefaultSchedule Save={props.Save} SetSave={props.SetSave} />
-        )}
-        {Foucs === 2 && <Omomi Save={props.Save} SetSave={props.SetSave} />}
-        {Foucs === 3 && <Ekhtesasi Save={props.Save} SetSave={props.SetSave} />}
-        {Foucs === 4 && <Ekhtiyari Save={props.Save} SetSave={props.SetSave} />}
+        {Foucs === 1 && <DefaultSchedule />}
+        {Foucs === 2 && <Omomi />}
+        {Foucs === 3 && <Ekhtesasi />}
+        {Foucs === 4 && <Ekhtiyari />}
       </div>
     </div>
   );
