@@ -1,6 +1,8 @@
 # This Project was made by create react app
 
 This is the Web version that has been hosted in my netlify.
+here is the link to it:
+https://subjectselect99.netlify.app/
 
 Saves in localstorage of your browser.
 
