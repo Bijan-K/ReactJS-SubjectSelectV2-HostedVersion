@@ -145,7 +145,7 @@ const Ekhtiyari = (props) => {
       <div className="bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse1"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-[10rem] z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-[10rem] z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={ekhtiyari}></HoverC>
         </div>

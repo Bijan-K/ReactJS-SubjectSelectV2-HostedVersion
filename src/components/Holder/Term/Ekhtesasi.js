@@ -297,7 +297,7 @@ const Ekhtesasi = (props) => {
       <div className="bg-slate-800 col-start-1 row-start-1 row-end-3 rounded flex flex-col relative mb-auto">
         <div
           id="hoverMouse1"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Asli1}></HoverC>
         </div>
@@ -495,7 +495,7 @@ const Ekhtesasi = (props) => {
       <div className="bg-slate-800 col-start-1 row-start-2  landscape:mt-32 rounded flex flex-col relative mb-auto">
         <div
           id="hoverMouse9"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Asli1}></HoverC>
         </div>
@@ -709,7 +709,7 @@ const Ekhtesasi = (props) => {
       <div className="bg-slate-800 col-start-2 row-start-1 row-end-2 rounded flex flex-col relative mb-auto">
         <div
           id="hoverMouse3"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Paye}></HoverC>
         </div>
@@ -859,7 +859,7 @@ const Ekhtesasi = (props) => {
       <div className="bg-slate-800 col-start-2 row-start-2 row-end-3 rounded flex flex-col relative mb-auto">
         <div
           id="hoverMouse4"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Takhsosi}></HoverC>
         </div>
@@ -999,7 +999,7 @@ const Ekhtesasi = (props) => {
         <div className="bg-slate-800  col-start-3 row-start-1 rounded flex flex-col relative m-2 ">
           <div
             id="hoverMouse5"
-            className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+            className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
           >
             <HoverC id={hoverV} table={Tamarkoz}></HoverC>
           </div>

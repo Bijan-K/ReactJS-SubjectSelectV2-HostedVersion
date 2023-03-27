@@ -20,9 +20,12 @@ const OverLay = ({ setOverlayState }) => {
                 شده است.
               </li>
             </ul>
-            <p className="mx-3 mt-2 text-black text-center">
+            <p className="mx-4 mt-2 text-black text-center">
               * بعضی گزینه ها در جدول های 93 هیچ کاری انجام نمی دهند و فقط حکم
               placeholder دارند
+            </p>
+            <p className="mx-3 mt-2 text-black text-center">
+              مانند عمومی و اختیاري
             </p>
             <p className="mx-3 mt-2 text-black text-center">
               * در اخر باید 144 یا 146 واحد داشته باشید(واحد های الزامی را هم

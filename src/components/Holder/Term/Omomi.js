@@ -150,7 +150,7 @@ const Omomi = (props) => {
       <div className="bg-slate-800 rounded flex flex-col relative pb-2">
         <div
           id="hoverMouse1"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Mabani}></HoverC>
         </div>
@@ -232,7 +232,7 @@ const Omomi = (props) => {
       <div className="bg-slate-800 rounded flex flex-col relative pb-2">
         <div
           id="hoverMouse2"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Akhlagh}></HoverC>
         </div>
@@ -513,7 +513,7 @@ const Omomi = (props) => {
       <div className="bg-slate-800 rounded flex flex-col relative mb-auto pb-2">
         <div
           id="hoverMouse6"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded "
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-44 w-36 z-30 bg-slate-800 left-0 rounded "
         >
           <HoverC id={hoverV} table={Koliha}></HoverC>
         </div>

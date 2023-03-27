@@ -373,7 +373,7 @@ const DefaultSchedule = () => {
       <div className="col-start-1 col-end-5 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse1"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term1}></HoverC>
         </div>
@@ -490,7 +490,7 @@ const DefaultSchedule = () => {
       <div className="col-start-5 col-end-9 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse2"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term2}></HoverC>
         </div>
@@ -624,7 +624,7 @@ const DefaultSchedule = () => {
       <div className="col-start-9 col-end-[13] bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse3"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term3}></HoverC>
         </div>
@@ -772,7 +772,7 @@ const DefaultSchedule = () => {
       <div className="col-start-1 col-end-5 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse4"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term4}></HoverC>
         </div>
@@ -904,7 +904,7 @@ const DefaultSchedule = () => {
       <div className="col-start-5 col-end-9 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse5"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term5}></HoverC>
         </div>
@@ -1022,7 +1022,7 @@ const DefaultSchedule = () => {
       <div className="col-start-9 col-end-[13] bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse6"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term6}></HoverC>
         </div>
@@ -1170,7 +1170,7 @@ const DefaultSchedule = () => {
       <div className="col-start-3 col-end-7 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse7"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term7}></HoverC>
         </div>
@@ -1314,7 +1314,7 @@ const DefaultSchedule = () => {
       <div className="col-start-7 col-end-11 bg-slate-800 rounded flex flex-col relative">
         <div
           id="hoverMouse8"
-          className="absolute flex flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
+          className="hidden landscape:inline-flex absolute flex-col justify-center items-center text-white  border-2 border-gray-900 border-t-4 opacity-0 h-48 w-40 z-30 bg-slate-800 left-0 rounded"
         >
           <HoverC id={hoverV} table={Term8}></HoverC>
         </div>

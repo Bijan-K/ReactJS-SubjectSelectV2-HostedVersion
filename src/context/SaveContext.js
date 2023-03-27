@@ -823,8 +823,8 @@ export const SaveProvider = ({ children }) => {
 
   const btnClicked = (e) => {
     let id = e.target.id;
-    let btn = document.getElementById(id);
     let SaveNow = Save;
+    let btn = document.getElementById(id);
     let vhdd = document.getElementById(`b${id}`);
 
     // value of clicked button
@@ -832,10 +832,8 @@ export const SaveProvider = ({ children }) => {
       if (element.id == id) {
         if (element.state == true) {
           element.state = false;
-          // SaveNow[SaveNow.length - 1].vhd -= element.vhd;
         } else if (element.state == false) {
           element.state = true;
-          // SaveNow[SaveNow.length - 1].vhd += element.vhd;
         }
       }
     });
@@ -854,12 +852,11 @@ export const SaveProvider = ({ children }) => {
       }
     });
 
-    // adding color
+    // removing color
     if (btn.classList.contains('bg-teal-500')) {
       btn.classList.remove('bg-teal-500');
       vhdd.classList.remove('bg-teal-300');
       vhdd.classList.remove('text-black');
-      // EDIT HEEEEEEEEEEEEEEEEERRRRRRRRRREEEEEEEEEEEEEEEEE
 
       SaveNow.forEach((element) => {
         if (element.r_state.length == 1) {
@@ -886,7 +883,7 @@ export const SaveProvider = ({ children }) => {
   useEffect(() => {
     let SaveData = Save;
     let vhddd = 0;
-
+    // not important
     if (SaveData[SaveData.length - 1].vhd >= 80) {
       SaveData[SaveData.length - 2].state = true;
       SaveData[SaveData.length - 2].r_state = [true];
@@ -912,8 +909,8 @@ export const SaveProvider = ({ children }) => {
         vhddd += element.vhd;
         let btn1 = document.getElementById(`${element.id}`);
         if (btn1) {
-          btn1.classList.add('bg-teal-500');
           let vhdd = document.getElementById(`b${element.id}`);
+          btn1.classList.add('bg-teal-500');
           vhdd.classList.add('bg-teal-300');
           vhdd.classList.add('text-black');
         }
@@ -962,6 +959,17 @@ export const SaveProvider = ({ children }) => {
           }
         }
       }
+
+      if (element.state == false) {
+        let btn1 = document.getElementById(`${element.id}`);
+        if (btn1) {
+          btn1.classList.remove('bg-teal-500');
+          let vhdd = document.getElementById(`b${element.id}`);
+          vhdd.classList.remove('bg-teal-300');
+          vhdd.classList.remove('text-black');
+        }
+      }
+
       SaveData[SaveData.length - 1].vhd = vhddd;
     });
 
